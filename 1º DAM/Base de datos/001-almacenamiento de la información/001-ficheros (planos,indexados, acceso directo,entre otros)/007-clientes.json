@@ -1,0 +1,20 @@
+[
+    {
+        nombre:"Agustín",
+        apellidos:"Morcillo Aguado",
+        telefono:"677321410",
+        email:"agustin.morcillo1912@gmail.com"
+    },
+    {
+        nombre:"Elena",
+        apellidos:"Botezatu",
+        telefono:"678452196",
+        email:"psicoelenaa@gmail.com"
+    },
+    {
+        nombre:"Lilo",
+        apellidos:"Morcillo Botezatu",
+        telefono:"677321410",
+        email:"liloteculomorenotegmail.com"
+    },
+]

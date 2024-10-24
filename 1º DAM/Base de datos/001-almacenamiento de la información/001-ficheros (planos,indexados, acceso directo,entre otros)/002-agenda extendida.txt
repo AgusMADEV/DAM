@@ -1,0 +1,10 @@
+Cliente1:
+Nombre: Agustín
+Apellidos: Morcillo Aguado
+Teléfono: 677321410
+email: agustin.morcillo1912@gmail.com
+Cliente2:
+Nombre: Elena
+Apellidos: Botezatu
+Teléfono: 694135849
+email: psicoelenaa@gmail.com

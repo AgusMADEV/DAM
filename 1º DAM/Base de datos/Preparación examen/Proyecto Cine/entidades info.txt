@@ -1,0 +1,46 @@
+Entidades:
+
+1. Película
+id_pelicula (PK, int): Identificador único de la película.
+titulo (varchar, 150): Título de la película.
+duracion (int): Duración de la película en minutos.
+genero (varchar, 100): Género de la película (e.g., acción, comedia).
+clasificacion (varchar, 10): Clasificación de la película (e.g., PG, R).
+
+2. Sala
+id_sala (PK, int): Identificador único de la sala.
+nombre (varchar, 50): Nombre de la sala.
+capacidad (int): Capacidad de la sala.
+tipo (varchar, 50): Tipo de sala (e.g., IMAX, 3D, estándar).
+ubicacion (varchar, 100): Ubicación de la sala dentro del cine.
+
+3. Proyección
+id_proyeccion (PK, int): Identificador único de la proyección.
+fecha_hora (datetime): Fecha y hora de la proyección.
+id_pelicula (FK, int): Identificador de la película proyectada (relación con Película).
+id_sala (FK, int): Identificador de la sala en la que se proyecta (relación con Sala).
+precio (decimal): Precio del boleto para la proyección.
+
+4. Cliente
+id_cliente (PK, int): Identificador único del cliente.
+nombre (varchar, 100): Nombre completo del cliente.
+email (varchar, 150): Correo electrónico del cliente.
+telefono (varchar, 15): Número de teléfono del cliente.
+fecha_nacimiento (date): Fecha de nacimiento del cliente.
+
+5. Boleto
+id_boleto (PK, int): Identificador único del boleto.
+id_cliente (FK, int): Identificador del cliente que compró el boleto (relación con Cliente).
+id_proyeccion (FK, int): Identificador de la proyección asociada (relación con Proyección).
+cantidad_boletos (int): Número de boletos comprados.
+total_pago (decimal): Total pagado por el cliente.
+
+Relaciones entre las tablas:
+
+Película y Proyección tienen una relación de uno a muchos: Una película puede tener varias proyecciones, pero una proyección solo pertenece a una película.
+
+Sala y Proyección tienen una relación de uno a muchos: Una sala puede tener varias proyecciones, pero una proyección se lleva a cabo en una sola sala.
+
+Cliente y Boleto tienen una relación de uno a muchos: Un cliente puede comprar varios boletos, pero un boleto es comprado por un solo cliente.
+
+Proyección y Boleto tienen una relación de uno a muchos: Una proyección puede tener varios boletos asociados, pero un boleto está relacionado con una sola proyección.

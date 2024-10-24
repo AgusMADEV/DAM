@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clientes>
+    <cliente>
+        <nombre>
+            Agustín
+        </nombre>
+        <apellidos>
+            Morcillo Aguado
+        </apellidos>
+        <telefono>
+            677321410
+        </telefono>
+        <email>
+            agustin.morcillo1912@gmail.com
+        </email>
+    </cliente>
+    <cliente>
+        <nombre>
+            Elena
+        </nombre>
+        <apellidos>
+            Botezatu
+        </apellidos>
+        <telefono>
+            657412562
+        </telefono>
+        <email>
+            psicoelenaa@gmail.com
+        </email>
+    </cliente>
+</clientes>
