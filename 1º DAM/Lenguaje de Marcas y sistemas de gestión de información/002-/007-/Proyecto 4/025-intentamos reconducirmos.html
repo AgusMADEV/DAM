@@ -3,7 +3,7 @@
   <head>
     <title>Portafolio</title>
     <meta charset="utf-8">
-    <style>
++    <style>
         body,html{                                 /* Selecciono el body y el html */
             padding: 0px;                          /* Le quito el margen interior */
             margin: 0px;                           /* Le quito el margen exterior */
@@ -75,20 +75,24 @@
             0%{
                 opacity:0;
                 filter:blur(25px);
+                left: -100%;
             }
             100%{
                 opacity:1;
                 filter:blur(0px);
+                left: 0%;
             }
         }
         @keyframes animdesaparece{
             0%{
                 opacity:1;
                 filter:blur(0px);
+                left: 0%;
             }
             100%{
                 opacity:0;
                 filter:blur(25px);
+                left: 100%;
             }
         }
     </style>
