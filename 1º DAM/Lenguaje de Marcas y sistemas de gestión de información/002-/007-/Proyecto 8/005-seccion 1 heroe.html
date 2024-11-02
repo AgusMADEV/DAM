@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Shopify</title>
+    <meta charset="utf-8">
+    <style>
+        @font-face{
+                font-family: nav;
+                src: url(fuentes/nav3.otf);
+                
+        }
+        @font-face{
+                font-family: button;
+                src: url(fuentes/button.otf);
+                
+        }
+        body,html{                                
+                padding: 0px;                         
+                margin: 0px;                          
+                background: #faf7ee;                 
+                color: black;                        
+                width: 100%; 
+                height: 100%;
+        }
+        header{
+            box-sizing: border-box;
+            height: 100px;
+            width: 100%;
+            padding: 0 100px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: stretch;
+        }
+        header img{
+            height: 40px;
+            width: 135px;
+        }
+        nav ul{
+            list-style-type:none;
+            padding:12px;
+            font-size: 18px;
+            font-family: nav;
+            font-weight: bold;
+        }
+        nav ul li{
+            display:inline-block;
+            padding:15px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:inherit;
+        }
+        .navizquierda{
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        .navderecha{
+            margin-left: auto; 
+        }
+        header button{
+            font-family: button;
+            background: #397f63;
+            color: white;
+            height: 50px;
+            width: 170px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+        }
+        #start{
+            box-sizing: border-box;
+            height: 100px;
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <img src="imagenes/logo.webp">
+        <nav class="navizquierda">
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#manage">Manage</a></li>
+            </ul>
+        </nav>
+        <nav class="navderecha">
+            <ul>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#login">Log in</a></li>
+            </ul>
+        </nav>
+        <button>Start free trial</button>
+    </header>
+    <main>
+        <section id="start">
+            <div class="texto">
+                <h3>The platform commerce is built on</h3>
+                <h4>Millions of the world's most succesful brand trust Shopify to sell, ship and process pauments anywhere.</h4>
+                <input type="text" name="email" id="email">
+                <button>Start free trial</button>
+                <p>Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive marketing emails from Shopify</p>
+            </div>
+        </section>
+    </main>
+  </body>
+</html>
+  
