@@ -21,7 +21,3 @@ perro3 = Perro ("Zeus", 10, 9,18)
 perro1.dameDatos()
 perro2.dameDatos()
 perro3.dameDatos()
-
-print(perro1)
-perro1= None
-print(perro1)

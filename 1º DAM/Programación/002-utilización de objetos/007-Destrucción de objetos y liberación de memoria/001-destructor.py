@@ -1,42 +1,29 @@
-class Cliente:
-    def __init__(self,
-                 nuevonombre,
-                 nuevosapellidos,
-                 nuevoemail,
-                 nuevotelefono
-                 ):
-        self.nombre = nuevonombre
-        self.apellidos = nuevosapellidos
-        self.email = nuevoemail
-        self.telefono = nuevotelefono
-    def dameDatos(self):
-        print(
-            "Nombre:",
-            self.nombre,
-            " - Apellidos:",
-            self.apellidos,
-            " - Email:",
-            self.email,
-            " - Teléfono:",
-            self.telefono)
-
-cliente1 = Cliente(
-    "Jose Vicente",
-    "Carratalá",
-    "info@jocarsa.com",
-    6535646
-    )
-cliente2 = Cliente(
-    "Juan",
-    "Martinez",
-    "juan@jocarsa.com",
-    6436546
-    )
-cliente1.dameDatos()
-cliente2.dameDatos()
-
-print(cliente1)
-cliente1 = None
-print(cliente1)        
+class Perro:
+        def __init__(self,nuevonombre,nuevaaltura,nuevopeso,nuevaedad):
+                self.altura = nuevaaltura
+                self.edad = nuevaedad
+                self.peso = nuevopeso
+                self.nombre = nuevonombre
+        def dameDatos(self):
+                print("Nombre:",
+                self.nombre,
+                " - Altura:",
+                self.altura,
+                " - Peso:",
+                self.peso,
+                " - Edad:",
+                self.edad
+                )
+perro1 = Perro ("Lilo", 8, 5,8)
+perro2 = Perro ("Dipsy", 3, 1.5,2)
+perro3 = Perro ("Zeus", 10, 9,18)
         
+perro1.dameDatos()
+perro2.dameDatos()
+perro3.dameDatos()
+
+print(perro1)
+perro1= None
+print(perro1)
+
 

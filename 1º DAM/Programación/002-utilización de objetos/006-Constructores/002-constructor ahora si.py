@@ -1,18 +1,18 @@
-class Gato:
+class Perro:
     def __init__(self,nuevonombre,nuevaaltura,nuevopeso,nuevaedad):
         self.altura = nuevaaltura
         self.edad = nuevaedad
         self.peso = nuevopeso
         self.nombre = nuevonombre
-    def maulla(self,numero):
-        cadena = "Miau "*numero
+    def ladra(self,numero):
+        cadena = "Guau "*numero
         print(cadena)
-    def estufera(self):
-        print("fffffffffffff")
+    def gruñe(self):
+        print("grrrrrrr")
 
+perro1 = Perro("Lilo",8,5,8)
 
-gato1 = Gato("Micifu",10,0.2,5)
-
-print("El nombre del gato es:",gato1.nombre)
-print("La edad del gato es:",gato1.edad)
-
+print("El nombre del perro es ",perro1.nombre)
+print("La edad del perro es ",perro1.edad)
+print("EL peso del perro es ",perro1.peso)
+print("La altura del perro es ",perro1.altura)

@@ -1,11 +1,11 @@
 '''
     Programa agenda
-    (c) 2024 Jose Vicente Carratalá
+    (c) 2024 Agustín Morcillo
 '''
 # Bienvenida #################################################
 
 TITULO = "Programa agenda"
-AUTOR = "Jose Vicente Carratalá"
+AUTOR = "Agustín Morcillo"
 print(TITULO,"por",AUTOR)
 
 # Estructura de control de ejecución infinita ################
