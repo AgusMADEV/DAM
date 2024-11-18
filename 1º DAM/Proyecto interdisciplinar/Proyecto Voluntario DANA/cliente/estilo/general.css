@@ -1,0 +1,128 @@
+/*/////////////////// FUENTES ///////////////////*/
+@font-face {
+	font-family: amatic;
+	src: url(fuentes/AmaticSC-Bold.ttf);
+}
+@font-face {
+	font-family: league;
+	src: url(fuentes/LeagueSpartan-Regular.ttf);
+}
+
+/*/////////////////// PROPIEDADES GENERALES ///////////////////*/
+
+body,html{
+	background:black;
+	font-family:league;
+	font-weight: lighter;
+	margin:0px;
+	padding:0px;
+}
+
+/*/////////////////// TEXTO ///////////////////*/
+h4,h3{
+	padding: 0px;
+	margin-top: 0px;
+}
+
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 10px;
+}
+
+/*/////////////////// BLOQUES CONSTRUCTIVOS ///////////////////*/
+
+header,main,footer{
+	width:1200px;
+	background:black;
+	margin:auto;
+}
+section{
+	width:100%;
+	text-align:center;
+	box-sizing:border-box;
+	padding:50px 150px;
+	box-sizing:border-box;
+}
+header,#heroe{
+	background: url(imagenes/lucesfondo.png);
+}
+header{
+	height:60px;
+	background:#e7e1da;
+}
+#heroe{
+	background: #e7e1da;
+}
+#objetivo{
+	padding:50px 0px;
+	background: #ddd5cc;
+}
+#propuestas{
+	padding:30px 150px;
+	height:450px;
+	background:#e7e1da;
+}
+footer{
+	background: #817363;
+}
+
+/*/////////////////// BOTONES ///////////////////*/
+
+button {
+    font-family: "league";
+		text-transform: uppercase;
+		border-radius: 20px;
+    border: none;
+    padding: 0px;
+    height: 50px;
+    width: 90px;
+    cursor: pointer;
+    background: linear-gradient(to left top,#df282f 49%,#c6a487 50%,#bb080f 51%);    /*Creamos un color degradado hacia la esquina superior izq. en el que hasta el 49% es un color, en 50% de otro y desde el 51% de otro*/
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    outline: none;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+
+button:hover {                                                                               /*Aquí creamos un hover para cuando iteractuemos con el boton haga algo*/
+    background: linear-gradient(to left top,#429552 49%,#d0bd6d 50%,#3e7b4a 51%);     /* Cambiamos el color del botón*/
+}
+.secundario{
+    background:#3e7b4a;
+}
+.secundario:hover{
+    background:#bb080f;
+}
+
+/*/////////////////// FEEDBACK ///////////////////*/
+
+#feedbackmail{
+	background: green;
+	color: white;
+	width: 300px;
+	height: 20px;
+	position: fixed;
+	top: 0px;
+	left: 50%;
+	margin-left: -150px;
+	border-radius: 0px 0px 20px 20px;
+	display: none;
+}
+#feedbackmail p{
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+	font-weight: lighter;
+}
+.animado{
+	animation: aparece 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes aparece{
+	0%{top:-30px;}
+	10%{top:0px;}
+	90%{top:0px;}
+	100%{top:-30px;}
+}

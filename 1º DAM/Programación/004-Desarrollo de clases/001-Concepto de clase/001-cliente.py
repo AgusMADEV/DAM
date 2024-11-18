@@ -21,16 +21,16 @@ class Cliente:
             self.telefono)
 
 cliente1 = Cliente(
-    "Jose Vicente",
-    "Carratalá",
-    "info@jocarsa.com",
-    6535646
+    "Agustin",
+    "Morcillo",
+    "agus@morcillo.com",
+    677321410
     )
 cliente2 = Cliente(
-    "Juan",
-    "Martinez",
-    "juan@jocarsa.com",
-    6436546
+    "Elena",
+    "Botezatu",
+    "elena@botezatu.com",
+    643668986
     )
 cliente1.dameDatos()
 cliente2.dameDatos()

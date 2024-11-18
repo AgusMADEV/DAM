@@ -1,0 +1,55 @@
+header{
+    padding:50px 127px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    box-sizing:border-box;
+    gap:100px
+}
+
+header #corporativo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+}
+header #corporativo img{
+    width:90px;
+}
+header h1,h2{
+    margin: 0px;
+    padding-left: 10px;
+}
+header h1{
+    color: #745b46;
+    font-size:15px;
+    text-transform: uppercase;
+}
+header h2{
+    color: #ac8564;
+    font-size:18px;
+}
+header nav a{
+    font-size:17px;
+    padding:10px;
+    font-weight:lighter;
+    background-color: #e7e1da;
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-transform: capitalize;
+    
+}
+header nav a:nth-child(odd):hover{
+    color: #45a049;
+}
+header nav a:nth-child(even):hover{
+    color: #df282f;
+}
