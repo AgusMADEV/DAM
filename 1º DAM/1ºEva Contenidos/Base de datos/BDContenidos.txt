@@ -1,0 +1,3 @@
+BASE DE DATOS:
+
+A partir del modelo de datos provisto (un modelo de datos por cada alumno), implementa ese modelo de datos en una base de datos MySQL. Respeta los nombres de las entidades como tablas, y los nombres de las propiedades como columnas de la tabla. Introduce claves primarias. Crea correctamente las claves foráneas para relacionar las tablas. Carga un conjunto mínimo de datos para demostrar el funcionamiento de tu tabla.

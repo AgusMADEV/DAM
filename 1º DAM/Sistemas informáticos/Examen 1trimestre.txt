@@ -1,0 +1,95 @@
+
+///////////////////////////// INSTALAR UBUNTU /////////////////////////////
+
+paso1
+	-instalar ubuntu
+	-asegurate de tener adaptador puente
+
+Sino tienes ifcoing
+	-sudo apt install net-tools
+
+/////////////////////////////COMPROBAR EL IP ANTES DE EMPEZAR y APUNTAR(ifcoinfig) /////////////////////////////
+
+/////////////////////////////INSTALAR APACHE /////////////////////////////
+
+paso2
+	-instalar apache
+	-sudo apt install apache2
+
+/////////////////////////////INSTALAR PHP /////////////////////////////
+paso3
+	-instalar php
+	-sudo apt install php
+   	-sudo apt install php-mysqli
+
+/////////////////////////////INSTALAR MYSQL/////////////////////////////
+
+paso3
+	-instalar MySQL
+	-sudo apt install mysql-server y sudo mysql_secure_installation y hacer skip a todo menos al ultimo, dar yes
+
+///////////////////////////// CREAR USER /////////////////////////////
+paso 4
+	-crear user wordpress with passwd wordpress y darle todos los permisos
+	-sudo mysql -u root -p
+	-CREATE DATABASE wordpress y le damos a use wordpress para ver que estamos dentro,
+	 luego show tables; y no habran tables pero esta ok
+	-CREATE USER 'wordpress'@'localhost' IDENTIFIED BY 'wordpress';
+	-GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress'@'localhost';
+	-FLUSH PRIVILEGES; y exit;
+
+///////////////////////////// INSTALAR WORDPRESS /////////////////////////////
+paso 5
+	cd ..
+	cd ..
+	cd var
+	cd www
+	cd html
+	ls
+	sudo mkdir wordpress
+	sudo chmod 777 -R wordpress
+	cd wordpress
+	ls
+	wget y direccion enlace wordpress https://es.wordpress.org/latest-es_ES.zip
+	sudo apt install unzip
+	unzip latest zip
+
+///////////////////////////// FUNCIONAMIENTO WORDPRESS /////////////////////////////
+
+Paso 6
+	Ir al ip(el que tengamos en ese momento http://192.168.1.203/wordpress)
+	database / user /passwd = wordpress
+	sudo chmod 777(755 en empresa) -R wordpress
+	comprobar y realizar instalacion
+	registrase y entrar a wordpress
+
+FINISHED!
+
+192.168.1.206
+
+* OTROS DATOS*
+
+SELECT User, Host FROM mysql.user; esto es para ver users
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	y ls para comprobar

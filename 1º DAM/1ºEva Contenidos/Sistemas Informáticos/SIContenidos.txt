@@ -1,0 +1,17 @@
+SISTEMAS INFORMÁTICOS:
+
+1.-Instalar máquina virtual con Ubuntu Server 24.04 LTS (recordad poner el adaptador puente en la red) - Deberéis traer la imagen de Ubuntu pre-descargada de casa, pero toda la instalación de la máquina virtual se realizará en examen
+
+2.-Instalar apache2
+
+3.-Instalar PHP
+
+4.-Instalar MySQL - mysql_secure_installation
+
+5.-Entrar en MySQL, crear una base de datos llamada wordpress, con un usuario llamado wordpress y la contraseña wordpress - y le doy todos los permisos a la base de datos WordPress
+
+6.-Descargar wordpress (o bien con wget, o bien en vuestro equipo y lo transferís con Filezilla)
+
+7.-Instalar WordPress
+
+8.-El examen finaliza con el Wordpress instalado (y visible desde otro equipo)

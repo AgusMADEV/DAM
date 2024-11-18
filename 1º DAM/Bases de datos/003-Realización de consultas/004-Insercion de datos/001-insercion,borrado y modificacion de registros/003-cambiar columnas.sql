@@ -1,0 +1,18 @@
+INSERT INTO clientes
+(
+    id,
+    nombre,
+    apellido,
+    email,
+    poblacion,
+    fechadenacimiento
+)
+VALUES
+(
+    NULL,
+    'Agustín',
+    'Morcillo Aguado',
+    'agustin.1912@gmail.com',
+    'Alicante',
+    '1999-12-19'
+);

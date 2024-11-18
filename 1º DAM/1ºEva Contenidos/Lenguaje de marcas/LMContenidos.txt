@@ -1,0 +1,4 @@
+LENGUAJE DE MARCAS:
+
+A partir del diseño de landing provisto (un diseño por cada alumno, jpg), convierte ese diseño en una web con HTML y CSS
+Para esta primera evaluación no entran ni Javascript ni PHP

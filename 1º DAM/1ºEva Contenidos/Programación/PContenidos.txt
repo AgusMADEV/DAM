@@ -1,0 +1,6 @@
+PROGRAMACIÓN:
+
+Pregunta 1: Realizar un CRUD en línea de comandos, persistiendo con el método elegido por el alumno, a partir de un modelo de datos que se proporcionará en el examen. Los métodos de persistencia serán: texto serializando, archivo binario, MySQL, SQLite
+
+
+Pregunta 2: Realizar una interfaz gráfica sencilla en TKinter a partir de un modelo provisto

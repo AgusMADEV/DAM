@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Freelancer AMADEV</title>
+    <meta charset="utf-8">
+    <style>
+        :root{
+            --primario:#f5f5f5;
+            --secundario:#f95353;
+            --terciario:#2b2344;
+        }
+        @font-face{
+                font-family: main;
+                src: url(fuentes/main.ttf);
+        }
+        @font-face{
+                font-family: fuente1;
+                src: url(fuentes/font1.ttf);
+        }
+        @font-face{
+                font-family: fuente2;
+                src: url(fuentes/font3.ttf);
+        }
+        body,html{                                
+            padding: 0px;                         
+            margin: 0px;                          
+            background: var(--primario);                 
+            color: black;                        
+            width: 100%; 
+            height: 100%;
+        }
+        header,section{
+            width: 100%;
+        }
+        .contenedor{
+            position: relative;
+				width:100%;
+                height: 100%;
+				margin:0px;
+				/*border:1px solid grey;*/
+			}
+        header{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            align-content: stretch;
+            gap: 300px;
+            background: var(--primario);
+        }
+        header img{
+            width: 140px;
+            height: 65px;
+        }
+        nav ul{
+            font-family: main;
+            list-style-type:none;
+            padding:12px;
+            font-size: 25px;
+            color: #2b2344;
+        }
+        nav ul li{
+            display:inline-block;
+            padding:15px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:inherit;
+        }
+        header button{
+            font-family: main;
+            background: var(--secundario);
+            color: var(--primario);
+            height: 60px;
+            width: 130px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: none;
+        }
+        /*////////////// ESTILOS DE LA PANCARTA HEROE ///////////////*/
+        #uno{
+            background: var(--primario);
+            height: 970px;
+        }
+        #uno img{
+            position:absolute;
+            width: 800px;
+            top: -161px;
+            left: 48%;
+        }
+        #uno .texto{
+            position: relative;
+            width:50%;
+            height: 35%;
+            top: 200px;
+            left: 250px;
+
+        }
+        #uno .texto h2{
+            font-size: 32px;
+            font-family: fuente2;
+            color: #383b3d;
+            font-weight: lighter;
+            margin-left: 0px;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        #uno .texto h1{
+            font-family: fuente1;
+            font-size: 112px;
+            color: var(--terciario);
+            margin: 10px;
+            margin-left: 0px;
+        }
+        #uno .texto p{
+            font-size: 27px;
+            padding-bottom: 50px;
+            margin: 0px;
+            color: #494b4c;
+            font-family: main;
+        }
+        #uno .texto button{
+            font-family: main;
+            background: var(--secundario);
+            color: var(--primario);
+            height: 75px;
+            width: 225px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: none;
+            margin-right: 20px;
+        }
+        #uno .texto .button2{
+            font-family: main;
+            background: var(--terciario);
+            color: var(--primario);
+            height: 75px;
+            width: 225px;
+            font-size: 25px;
+            border-radius: 5px;
+            border: none;
+        }
+        #uno .contenedor .social-icons{
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: baseline;
+            align-content: stretch;
+            top: 800px;
+            left: 250px;
+        }
+        .social-icons p{
+            font-family: main;
+            color: #494b4c;
+            font-size: 23px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .icon {
+            font-family: main;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            color: var(--primario);
+            font-size: 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            background-color: var(--terciario);
+            transition: background-color 0.3s;
+        }
+        /*////////////// ESTILOS DE LA PANCARTA 2 ///////////////*/
+        #dos{
+            background: white;
+            height: 1080px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="imagenes/logo.png">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#pages">Pages</a></li>
+          <li><a href="#contact">Contact</a></li>
+         </ul>
+      </nav>
+      <button>Hire Me</button>
+    </header>
+    <section id="uno">
+        <div class="contenedor">
+            <div class="texto">
+                <h2>Hello World! I am</h2>
+                <h1>Agustín-MA</h1>
+                <p>Senior Front-End Web Designer Based on Sylhet IT Academy</p>
+                <button>Dowload Resume</button>
+                <button class="button2">Contact Me</button>
+            </div>
+            <img src="imagenes/perfil2.png">
+            <div class="social-icons">
+                <p>Find Me On</p>
+                <div class="icons">
+                    <a href="#" class="icon facebook">f</a>
+                    <a href="#" class="icon linkedin">in</a>
+                    <a href="#" class="icon behance">Bē</a>
+                    <a href="#" class="icon dribbble">🏀</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="dos">
+        <div class="contenedor">
+        </div>
+    </section>
+    <section id="tres">
+        <div class="contenedor">
+        </div>
+    </section>
+    <main>
+    </main>
+  </body>
+</html>
+  

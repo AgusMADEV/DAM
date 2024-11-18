@@ -1,0 +1,9 @@
+ENTORNOS DE DESARROLLO:
+
+1.-Presentar vuestro GitHub correctamente creado, compartido conmigo (en el caso de que sea privado) y con la información correctamente estructurada (como mínimo, como la mía)
+
+2.-Refactorización inicial de un código en Javascript (aplicar técnicas de extracción a funciones y nombrado correcto de variables y otros identificadores)
+
+3.-Realizacion de una prueba unitaria sobre una función 
+
+4.-Justificación de qué entornos de desarrollo estáis usando en el ciclo, qué entorno de desarrollo para qué lenguaje, y por qué.

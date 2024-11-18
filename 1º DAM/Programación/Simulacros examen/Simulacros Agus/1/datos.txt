@@ -1,0 +1,12 @@
+-cartas
+ -id
+ -nombre
+ -precio
+ -clase
+
+-empleado
+ -id
+ -nombre
+ -apellidos
+ -teléfono
+ -turno

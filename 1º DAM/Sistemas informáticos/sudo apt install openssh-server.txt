@@ -1,0 +1,22 @@
+############# INSTALACIÓN EN MAQUINA V UBUNTU / PHPMYADMIN #############################
+
+-1º sudo apt install apache2
+-2º sudo apt install php
+-3º sudo apt install mysql-server
+-4º sudo apt install phpmyadmin
+
+####################### CREO UN USUARIO EN PHPMYADMIN/MYSQL ##############################
+
+1. sudo MySQL
+2. SELECT user, host FROM mysql.user;
+3. CREATE USER 'nuevo_usuario'@'localhost' IDENTIFIED BY 'tu_contraseña';
+   GRANT ALL PRIVILEGES ON *.* TO 'nuevo_usuario'@'localhost' WITH GRANT OPTION;
+   FLUSH PRIVILEGES;
+
+#########################################################################################
+sudo apt install openssh-server
+
+sudo apt install net-tools
+
+win = ipconfig
+mac/linux = ifconfig

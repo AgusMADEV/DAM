@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Shopify</title>
+    <meta charset="utf-8">
+    <link href="https://db.onlinewebfonts.com/c/e9376501e69339f019d03488b68510a1?family=LilGrotesk" rel="stylesheet">
+    <style>
+        @font-face{
+            font-family: nav;
+            src: url(fuentes/nav3.otf);
+                
+        }
+        @font-face{
+            font-family: button;
+            src: url(fuentes/button.otf);
+                
+        }
+        @font-face{
+            font-family: heroe;
+            src: url(fuentes/heroe.ttf);
+        }
+        @font-face{
+            font-family: heroe2;
+            src: url(fuentes/heroe2.ttf);
+        }
+        body,html{                                
+            padding: 0px;                         
+            margin: 0px;                          
+            background: #faf7ee;                 
+            color: black;                        
+            width: 100%; 
+            height: 100%;
+        }
+        header{
+            box-sizing: border-box;
+            height: 100px;
+            width: 100%;
+            padding: 0 100px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            align-items: center;
+            align-content: stretch;
+        }
+        header img{
+            height: 40px;
+            width: 135px;
+        }
+        nav ul{
+            list-style-type:none;
+            padding:12px;
+            font-size: 18px;
+            font-family: nav;
+            font-weight: bold;
+        }
+        nav ul li{
+            display:inline-block;
+            padding:15px;
+        }
+        nav ul li a{
+            text-decoration:none;
+            color:inherit;
+        }
+        .navizquierda{
+            margin-right: auto;
+            padding: 0 20px;
+        }
+        .navderecha{
+            margin-left: auto; 
+        }
+        header button{
+            font-family: button;
+            background: #397f63;
+            color: white;
+            height: 50px;
+            width: 170px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+        }
+        main{
+            width: 100%;
+            height: 100%;
+        }
+        #start{
+            box-sizing: border-box;
+            height: 710px;
+            width: 100%;
+        }
+        #start .texto{
+            padding: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: baseline;
+            align-content: center;
+            width: 30%;
+        }
+        #start .texto h3{
+            font-size: 45px;
+            font-family: heroe;
+            margin: 0%;
+            color: #1c4a40;
+            font-weight: bold;
+            letter-spacing: -2px;
+        }
+        #start .texto h4{
+            font-family: heroe2;
+            font-size: 22px;
+            color: #7e7e7d;
+            letter-spacing: 1px;
+        }
+        #start .texto .comunicacion{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: stretch;
+            gap: 20px;
+        }
+        #start .texto .comunicacion button{
+            font-family: button;
+            background: #397f63;
+            color: white;
+            height: 57px;
+            width: 170px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+        }
+        #start .texto .comunicacion input{
+            background: white;
+            color: #7e7e7d;
+            height: 50px;
+            width: 250px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #7e7e7d;
+            font-size: 17px;
+            padding-left: 25px;
+        }
+        #start .texto p{
+            font-size: 13px;
+            font-family: sans-serif;
+            padding-top: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <header>
+        <img src="imagenes/logo.webp">
+        <nav class="navizquierda">
+            <ul>
+                <li><a href="#start">Start</a></li>
+                <li><a href="#sell">Sell</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#manage">Manage</a></li>
+            </ul>
+        </nav>
+        <nav class="navderecha">
+            <ul>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#login">Log in</a></li>
+            </ul>
+        </nav>
+        <button>Start free trial</button>
+    </header>
+    <main>
+        <section id="start">
+            <div class="texto">
+                <h3>The platform<br>commerce is built on</h3>
+                <h4>Millions of the world's most succesful brands<br>trust Shopify to sell, ship and process payments<br>anywhere.</h4>
+                <div class="comunicacion">
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Start free trial</button>
+                </div>
+                <p>Try Shopify free for 14 days, no credit card required. By entering your email, you agree to receive marketing emails from Shopify</p>
+            </div>
+        </section>
+        <section id="business">
+            <div class="texto">
+                <h3>Bring your business online</h3>
+                <p>Create an ecommerce website backe by powerful tools that help you find customers, drive sales, and manage your day-to-day</p>
+            </div>
+            <article>
+                <img src="imagenes/alfred.svg" alt="Agustín Morcillo">
+                <h4>Food & Drink</h4>
+                <p>Alfred</p>
+            </article>
+            <article>
+                <img src="imagenes/jewelry.svg" alt="Agustín Morcillo">
+                <h4>Jewelry</h4>
+                <p>Corey Moranis</p>
+            </article>
+            <article>
+                <img src="imagenes/asado.svg" alt="Agustín Morcillo">
+                <h4>Food & Drink</h4>
+                <p>Detour Coffee</p>
+            </article>
+            <article>
+                <img src="imagenes/beauty.svg" alt="Agustín Morcillo">
+                <h4>Beauty & Cosmetics</h4>
+                <p>Then I Met You</p>
+            </article>
+            <article>
+                <img src="imagenes/garden.svg" alt="Agustín Morcillo">
+                <h4>Home & Garden</h4>
+                <p>Miss Boon</p>
+            </article>
+        </section>
+    </main>
+  </body>
+</html>
+  

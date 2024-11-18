@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head lang="es2">
+        <title>CRUD</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <input id="nombre" placeholder="nombre">
+        <input id="apellidos" placeholder="apellidos">
+        <input id="email" placeholder="email">
+        <button id="guardar">Guardar</button>
+        <script>
+            var coleccion =[]
+            let boton = document.querySelector("#guardar")
+            boton.onclick = fuction(){
+                console.log("Has hecho click en el boton")
+                let nombre = document.querySelector("#nombre").value
+                let apellidos = document.querySelector("#apellidos").value
+                let email = document.querySelector("#email").value
+                console.log(nombre,apellidos,email)
+            }
+        
+        </script>
+    </body>
+
+
+</html>

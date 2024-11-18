@@ -1,0 +1,1 @@
+ALTER TABLE `boleto` ADD CONSTRAINT `boletoaproyeccion` FOREIGN KEY (`id_proyeccion`) REFERENCES `proyección`(`id_proyeccion`) ON DELETE RESTRICT ON UPDATE RESTRICT;
