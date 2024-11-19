@@ -3,6 +3,10 @@ main{
 	height:100%;
 	padding-top:147px;
 }
+main a{
+	color:#C2A464;
+	text-decoration: none;
+}
 main .heroe{
 	width:100%;
 	height: 645px;
@@ -109,12 +113,12 @@ main .serie{
 	align-content: stretch;
 }
 main .serie .texto{
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: stretch;
-	align-content: stretch;
+	display: flex; /* Esto activa flexbox, o sea, que los elementos se ordenen de forma flexible. */
+	flex-direction: row; /* Los elementos van en fila, de izquierda a derecha. */
+	flex-wrap: nowrap; /* Les decimos que no se pasen a la siguiente línea, todo queda en una sola fila. */
+	justify-content: flex-start; /* Alinea los elementos al inicio del contenedor, o sea, hacia la izquierda. */
+	align-items: stretch; /* Estira los elementos verticalmente para que ocupen todo el alto del contenedor. */
+	align-content: stretch; /* Si hubiera varias filas, se estirarían para llenar el espacio vertical, pero como no hay filas extras (porque usamos nowrap), esto no se nota. */
 	margin:50px 66px 20px 66px;
 	padding-bottom: 26px;
 }
@@ -145,6 +149,7 @@ main .serie .texto h3{
 main .serie .capitulos{
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+	margin-bottom: 80px;
 }
 main .serie .capitulos article{
 	background:white;
