@@ -1,0 +1,73 @@
+CAPITULOS 
+    Identificador (AI)
+    numerador
+    titulo
+    subtitulo
+    imagen
+    video
+    texto
+
+EXPERTOS
+    Identificador (AI)
+    nombre
+    descripcion
+    imagen
+    video
+    texto
+
+CAPITULOS EXPERTOS 
+    Identificador (AI)
+    capitulos_nombre (FK)
+    expertos_nombre (FK)
+
+PROYECTO
+    Identificador (AI)
+    nombre
+    texto
+    imagen
+
+DOCUMENTACION GRÁFICA
+    Identificador (AI)
+    categoria_nombre (FK)
+    imagen
+    piedefoto
+
+DOCUMENTACION GRÁFICA CATEGORIAS
+    Identificador (AI)
+    categorias
+
+BIBLIOGRAFIA
+    Identificador (AI)
+    imagen
+    titulo
+    expertos_nombre
+
+CREDITOS
+    Identificador (AI)
+    titulo
+    trabajo
+    nombre
+
+HEROE
+    Identificador (AI)
+    titulo
+    subtitulo
+    texto
+    contenidovisual
+
+INICIO
+    Identificador (AI)
+    titulo
+    subtitulo 
+    texto
+
+COOKIES
+    Identificador (AI)
+    titulo
+    texto
+
+AVISO LEGAL
+    Identificador (AI)
+    titulo
+    texto
+

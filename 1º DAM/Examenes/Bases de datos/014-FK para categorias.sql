@@ -1,0 +1,1 @@
+ALTER TABLE `documentaciongrafica` ADD CONSTRAINT `documentaciongraficaacategoria` FOREIGN KEY (`categoria_nombre`) REFERENCES `documentaciongraficacategorias`(`Identificador`) ON DELETE RESTRICT ON UPDATE RESTRICT;

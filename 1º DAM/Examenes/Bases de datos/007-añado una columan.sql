@@ -1,0 +1,1 @@
+ALTER TABLE `capitulos` ADD `Numerador` VARCHAR(255) NOT NULL AFTER `Identificador`;
