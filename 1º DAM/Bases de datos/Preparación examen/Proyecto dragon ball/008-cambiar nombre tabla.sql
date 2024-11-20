@@ -1,0 +1,1 @@
+ALTER TABLE transpormaciones RENAME TO transformaciones;

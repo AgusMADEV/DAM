@@ -1,0 +1,26 @@
+-Personajes
+
+    id_personaje (PK)
+    nombre
+    raza (Saiyajin, Humano, Namekiano, etc.)
+    poder_de_lucha
+    id_planeta_origen (FK de Planetas) — Esta es la relación uno a muchos. Cada personaje tiene un planeta de origen.
+
+-Planetas
+
+    id_planeta (PK)
+	nombre
+	tipo (planeta de origen de un personaje, planeta destruido, 	etc.)
+	población
+
+-Transformaciones
+
+	id_transformacion (PK)
+	nombre
+	descripcion
+	poder_incrementado
+
+-Personajes_Transformaciones (tabla intermedia para la relación Many-to-Many entre Personajes y Transformaciones)
+
+	id_personaje (FK de Personajes)
+	id_transformacion (FK de Transformaciones)
