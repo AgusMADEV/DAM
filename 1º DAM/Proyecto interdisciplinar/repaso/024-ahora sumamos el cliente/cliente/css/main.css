@@ -1,0 +1,168 @@
+main{
+	width:100%;
+	height:100%;
+	padding-top:147px;
+}
+main a{
+	color:#C2A464;
+	text-decoration: none;
+}
+main .heroe{
+	width:100%;
+	height: 645px;
+	min-height:400px;
+	background:url(../img/fondoinicio.webp);
+	background-size:cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+main .heroe .imagenes{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+	gap: 45px;
+}
+main .heroe .texto{
+	padding-bottom: 70px;
+}
+main .heroe #uni{
+	width: 229px;
+	height: 50px;
+}
+main .heroe img{
+	width: 287px;
+	height: 48px;
+}
+main .heroe h1,h2,h3{
+	color: #C2A464;
+	margin: 0px;
+	text-align: center;
+	font-family: "TrajanPro3Bold", "OpenSans",sans-serif;
+	text-shadow: 0px 0px 16.8px #2F2E3E;
+}
+main .heroe h1{
+	font-size: 80px;
+}
+main .heroe h2{
+	font-size: 45px;
+}
+main .heroe h3{
+	padding-top: 15px;
+	font-size: 80px;
+	font-family: "Monotype Corsiva","TrajanPro3Bold", "OpenSans",sans-serif;
+	font-weight: 500;
+}
+main .union{
+	position: relative;
+	width:100%;
+	height:auto;
+	margin:auto;
+	background:url(../img/fondoheroe.webp);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+main .union .texto{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: stretch;
+	margin: 0px 66px;
+	padding-bottom: 26px;
+}
+main .union .texto h2{
+	font-size: 40px;
+	text-align: left;
+	margin-right: 80px;
+	height: 130px;
+	width: 271px;
+	line-height: 40px;
+	padding-top: 90px;
+}
+main .union .texto .parrafo{
+	font-size: 20px;
+	line-height: 2em;
+	color: white;
+	width: 885px;
+	padding-top: 60px;
+}	
+main .union .video iframe{
+	height: 665px;
+	width: 1182px;
+	margin-bottom: 100px;
+}
+main .serie{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: stretch;
+}
+main .serie .texto{
+	display: flex; /* Esto activa flexbox, o sea, que los elementos se ordenen de forma flexible. */
+	flex-direction: row; /* Los elementos van en fila, de izquierda a derecha. */
+	flex-wrap: nowrap; /* Les decimos que no se pasen a la siguiente línea, todo queda en una sola fila. */
+	justify-content: flex-start; /* Alinea los elementos al inicio del contenedor, o sea, hacia la izquierda. */
+	align-items: stretch; /* Estira los elementos verticalmente para que ocupen todo el alto del contenedor. */
+	align-content: stretch; /* Si hubiera varias filas, se estirarían para llenar el espacio vertical, pero como no hay filas extras (porque usamos nowrap), esto no se nota. */
+	margin:50px 66px 20px 66px;
+	padding-bottom: 26px;
+}
+main .serie .titulo{
+	position: absolute;
+	font-size: 25px;
+	text-align: left;
+	margin-right: 80px;
+	height: 130px;
+	width: 271px;
+	line-height: 40px;
+	padding-top: 90px;
+}
+main .serie .parrafo{
+	font-size: 20px;
+	line-height: 40px;
+	margin-left: 25%;
+	margin-top: 50px;
+}
+main .serie .texto h2,h3{
+	text-shadow: none;
+	text-align: left;
+}
+main .serie .texto h3{
+	color: #2f2e3e;
+	font-size: 20px;
+}
+main .serie .capitulos{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	margin-bottom: 80px;
+}
+main .serie .capitulos article{
+	background:white;
+	border: 5px solid black;
+	margin-bottom:20px;
+	padding: 0px 10px 20px 10px;
+	box-sizing:border-box;
+	text-align:left;
+	position:relative;
+	margin-right: 35px;
+	margin-bottom: 30px;
+}
+main .serie .capitulos article img{
+	width: 241px;
+	height: 135px;
+}
