@@ -1,0 +1,31 @@
+.mtk10{
+    font-weight: 700;
+    background: linear-gradient(45deg,#f376cf,#ff958d);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+}
+.mtk5{
+    color: #50fa7b;
+    background-image: linear-gradient(45deg,#11998f,#38ef7d);
+    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    font-weight: 700;
+    font-family: "Cascadia Code";
+}
+.monaco-editor .detected-link, .monaco-editor .detected-link-active {
+    text-decoration: none;
+    text-underline-position: under;
+    border-bottom:1px dashed #efdf62;
+}
+.mtk8{
+    color:#efdf62;
+}
+.codicon-accounts-view-bar-icon:before {
+    content: '';
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(/C:/customVSC/avatar.png);
+    background-size: 100%;
+}
