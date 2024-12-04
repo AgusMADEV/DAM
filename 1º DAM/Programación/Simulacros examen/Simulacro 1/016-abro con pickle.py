@@ -18,7 +18,7 @@ clientes = []                                                           #Creo un
 productos = []                                                          #Creo una lista vacia que es donde voy a guardar los productos
 
 print("Programa de Consola")                                             #Imprimo mensaje de bienvenida
-print("v0.1 por Aguastín Morcillo Aguado")                               #Imprimo la version y el autor
+print("v0.1 por Agustín Morcillo Aguado")                               #Imprimo la version y el autor
 
 while True:                                                              #Creo un bucle infinito
     print("###########################")                                 #Imprimo un separador visual
