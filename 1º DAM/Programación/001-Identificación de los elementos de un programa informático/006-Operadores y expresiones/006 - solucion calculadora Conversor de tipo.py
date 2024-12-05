@@ -1,9 +1,8 @@
 print('Programa calculadora v0.1 por Agustín Morcillo Aguado')
 
-operando1 = input("Introduce el primer operando: ")
 operando2 = input("Introduce el segundo operando: ")
 
-operando1 = int(operando1)
+operando1 = 5.5
 operando2 = int(operando2)
 
 resultado = operando1 + operando2
