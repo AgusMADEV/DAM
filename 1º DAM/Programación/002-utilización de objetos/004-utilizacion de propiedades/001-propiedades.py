@@ -11,6 +11,7 @@ class Perro:
         print("grrrrrrr")
 
 perro1 = Perro()
-print("El nombre del gato1 es ",perro1.nombre)
+print("El nombre del perro1 es ",perro1.nombre)
 perro1.nombre = "Lilo"
-print("El nombre del gato1 es ",perro1.nombre)
+print("El nombre del perro1 es ",perro1.nombre)
+perro1.ladra(5)
