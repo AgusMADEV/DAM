@@ -1,0 +1,11 @@
+CLIENTE: 1
+Nombre: Agustín
+Apellidos: Morcillo Aguado
+Email: agus@morcillo.com
+Teléfono: 123456789
+
+CLIENTE: 2
+Nombre: Elena
+Apellidos: Botezatu
+Email: elena@botezatu.com
+Teléfono: 987654321
