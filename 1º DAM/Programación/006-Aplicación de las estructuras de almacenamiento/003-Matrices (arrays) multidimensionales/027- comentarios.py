@@ -1,6 +1,6 @@
 '''
     Programa agenda con colecciones bidimensionales
-    (c) 2024 Jose Vicente Carratalá
+    (c) 2024 Agustín Morcillo Aguado
 '''
 
 import platform                                                             # Importo la libreria plataforma para poder detectar en que navegador estoy
@@ -13,7 +13,7 @@ def limpiaPantalla():                                                       # Cr
         os.system("clear")                                                  # el comando entonces es clear
 
 limpiaPantalla()                                                            # llamo a la funcion y limpio la pantalla al iniciar el programa
-print("Programa agenda (c) 2024 Jose Vicente Carratalá")                    # Imprimo un mensaje de bienvenida
+print("Programa agenda (c) 2024 Agustín Morcillo Aguado")                    # Imprimo un mensaje de bienvenida
 
 agenda = []                                                                 # creo una lista vacia como estructura para guardar toda mi informacion
 
