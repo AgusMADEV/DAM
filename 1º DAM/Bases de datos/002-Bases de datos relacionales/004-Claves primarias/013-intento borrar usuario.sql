@@ -1,1 +1,0 @@
-DELETE FROM empleados WHERE `empleados`.`id` = 1

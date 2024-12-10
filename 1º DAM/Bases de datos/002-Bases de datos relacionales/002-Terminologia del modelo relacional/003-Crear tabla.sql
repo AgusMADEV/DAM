@@ -1,1 +1,0 @@
-CREATE TABLE empleados (nombre VARCHAR(20),apellidos VARCHAR(20),telefono INT(20),email VARCHAR(20));
