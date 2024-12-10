@@ -57,6 +57,6 @@ print(datos)
 
 plt.pie(datos, labels=etiquetas)
 
-plt.savefig('ssoo.png')
+plt.savefig('grafica1.png')
 
 plt.close()

@@ -1,0 +1,20 @@
+<clientes>
+    <cliente>
+        <nombre> Agustín </nombre>
+        <apellidos> Morcillo Aguado </apellidos>
+        <telefono> 123456789 </telefono>
+        <email>agus@morcillo.com </email>
+    </cliente>
+    <cliente>
+        <nombre> Elena </nombre>
+        <apellidos> Botezatu </apellidos>
+        <telefono> 987654321 </telefono>
+        <email> elena@botezatu.com </email>
+    </cliente>
+    <cliente>
+        <nombre> Elena </nombre>
+        <apellidos> Botezatu </apellidos>
+        <telefono> 987654321 </telefono>
+        <email> elena@botezatu.com </email>
+    </cliente>
+</clientes>

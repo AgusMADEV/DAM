@@ -9,7 +9,10 @@
 NOMBRE_DEL_PROGRAMA = "Programa calculadora"
 VERSION = "0.1"
 AUTOR = "Agustín Morcillo Aguado"
+
+print("--------------------------------------------")
 print(NOMBRE_DEL_PROGRAMA,VERSION,AUTOR)
+print("--------------------------------------------")
 
 # Toma de datos
 operando1 = input('Introduce tu primera operador: ')
