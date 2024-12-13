@@ -1,0 +1,39 @@
+html,body{
+    padding: 0px;
+    margin: 0px;
+}
+header{
+    height: 44px;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    background: whitesmoke;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.3) ;
+}
+header .contenedor{
+    width: 1024px;
+    margin:auto;
+}
+header .contenedor img{
+    width: 20px;
+    display: inline-block;
+    margin-top: 10px;
+}
+header .contenedor nav{
+    display: inline-block;
+    vertical-align: top;
+}
+header .contenedor ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+header .contenedor ul li{
+    display: inline-block;
+    margin: 0px 10px;
+    line-height: 44px;
+}
+header .contenedor ul li a{
+    text-decoration: none;
+    color: inherit;
+}
