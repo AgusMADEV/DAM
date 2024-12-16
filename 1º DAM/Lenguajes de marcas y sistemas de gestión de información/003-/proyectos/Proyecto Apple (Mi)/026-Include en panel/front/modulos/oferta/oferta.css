@@ -1,0 +1,22 @@
+#oferta{
+    margin-top: 44px;
+    width: 100% ;
+    height: 52px;
+    background: tomato;
+    color: whitesmoke;
+    text-align: center;
+    animation:aparece 5s;
+    opacity: 0;
+    animation-fill-mode:forwards;
+    animation-delay: 2s;
+}
+@keyframes aparece {
+    0%{opacity:0;background: white;}
+    10%{opacity:1;background: white;}
+    20%{opacity:1;background: white;}
+    30%{opacity:1;background: tomato;}
+    40%{opacity:1;background: white;}
+    50%{opacity:1;background: tomato;}
+    75%{opacity:1;background: tomato;}
+    100%{opacity:1;background: white;color:tomato}
+}
