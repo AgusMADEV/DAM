@@ -7,7 +7,7 @@ let secciones = [
     'xxx',
     'yyy',
     'zzz'
-]
+    ]
 let cabecera = document.querySelector("header nav ul")
 let plantilla = document.querySelector("#elementomenu")
 secciones.forEach(function(seccion){
