@@ -6,6 +6,6 @@
 	}
 	
 	$persona1 = new Persona();
-	$persona1->nombre = "Jose Vicente";
+	$persona1->nombre = "Agustin";
 	var_dump($persona1);
 ?>

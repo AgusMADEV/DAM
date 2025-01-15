@@ -21,12 +21,12 @@
 				}
 			// Métodos libres
 				public function saluda(){
-					return "Hola como estas";
+					return "Hola que haces";
 				}
 	}
 	
 	$persona1 = new Persona();
-	$persona1->setNombre("Jose Vicente");
+	$persona1->setNombre("Agustin");
 	echo $persona1->getNombre();
 	echo "<br>";
 	var_dump($persona1);

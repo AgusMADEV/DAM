@@ -29,11 +29,11 @@
 				}
 			// Métodos libres
 				public function saluda(){
-					return "Hola como estas";
+					return "Hola que haces";
 				}
 	}
 	
-	$persona1 = new Persona("Jose Vicente","Carratala Sanchis",46,[123456,345678]);
+	$persona1 = new Persona("Agustin","Morcillo Aguado",46,[123456,345678]);
 	echo "<br>";
 	var_dump($persona1);
 ?>

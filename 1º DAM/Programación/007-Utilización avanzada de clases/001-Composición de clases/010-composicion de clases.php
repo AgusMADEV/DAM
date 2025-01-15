@@ -52,20 +52,20 @@
 				}
 			// Métodos libres
 				public function saluda(){
-					return "Hola como estas";
+					return "Hola que haces";
 				}
 	}
 	$direccion1 = new Direccion(
-		"Calle de Jose VIcente",
+		"Calle de Agustin",
 		1,
-		46000,
-		"Valencia",
+		03130,
+		"Santa Pola",
 		"España"
 		);
 	$persona1 = new Persona(
-		"Jose Vicente",
-		"Carratala Sanchis",
-		46,
+		"Agustin",
+		"Morcillo Aguado",
+		25,
 		[123456,345678],
 		$direccion1
 		);
