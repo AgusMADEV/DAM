@@ -10,6 +10,12 @@
    background-size: cover !important;
    background-position:center !important;
 }
+@media screen and (max-width: 800px) {
+	#destacados{
+		display: block;
+	}
+}
+
 #destacados h3, #destacados h4{
     font-size: 2em;
     padding: 0px;
