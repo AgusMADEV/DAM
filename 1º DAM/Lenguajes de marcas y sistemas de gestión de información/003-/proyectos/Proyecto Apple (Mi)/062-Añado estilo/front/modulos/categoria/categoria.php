@@ -15,6 +15,15 @@
 			"Subtitulo bloque 3",
 			"texto bloque 3");
 		echo $bloque3->getBloque();
+
+		$bloque4 = new BloqueCaja(
+			"Titulo bloque 4",
+			"Subtitulo bloque 4",
+			"texto bloque 4",
+			"",
+			"",
+			"border-radius:25px; background:LightPink;");
+		echo $bloque4->getBloque();
 	?>
 </main>
 <script>

@@ -6,7 +6,7 @@
                 protected $texto;
                 protected $imagen;
                 protected $imagenfondo;
-                
+                protected $estilo;
             
             // Métodos
                 // Método constructor, le da valores iniciales al objeto
@@ -15,13 +15,15 @@
                                     $nuevosubtitulo = "",
                                     $nuevotexto = "",
                                     $nuevaimagen = "",
-                                    $nuevaimagenfondo = ""			
+                                    $nuevaimagenfondo = "",
+                                    $nuevoestilo = ""			
                                             ){
                         $this->titulo = $nuevotitulo;
                         $this->subtitulo = $nuevosubtitulo;
                         $this->texto = $nuevotexto;
                         $this->imagen = $nuevaimagen;
                         $this->imagenfondo = $nuevaimagenfondo;
+                        $this->estilo = $nuevoestilo;
                     }
                 // Métodos set y get - leen y escriben valores a las propiedades 
                     public function getBloque(){
@@ -38,7 +40,7 @@
         class BloqueCompleto extends Bloque{
             public function getBloque(){
                         return "
-                            <div class='bloque completo'>
+                            <div class='bloque completo' style='".$this->estilo."'>
                                 <h3>".$this->titulo."</h3>
                                 <h4>".$this->subtitulo."</h4>
                                 <p>".$this->texto."</p>
@@ -49,7 +51,7 @@
         class BloqueCaja extends Bloque{
             public function getBloque(){
                         return "
-                            <div class='bloque caja'>
+                            <div class='bloque caja' style='".$this->estilo."'>
                                 <h3>".$this->titulo."</h3>
                                 <h4>".$this->subtitulo."</h4>
                                 <p>".$this->texto."</p>
@@ -77,7 +79,7 @@
         }
             public function getBloque(){
                         return "
-                            <div class='bloque mosaico'>
+                            <div class='bloque mosaico' style='".$this->estilo."'>
                                 <h3>".$this->titulo."</h3>
                                 <h4>".$this->subtitulo."</h4>
                                 <p>".$this->texto."</p>
