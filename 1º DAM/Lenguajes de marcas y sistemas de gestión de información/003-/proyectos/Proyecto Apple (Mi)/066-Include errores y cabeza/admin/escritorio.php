@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="Stylesheet" href="estilo/escritorio.css">
+    <?php include "inc/cabeza.php"?>
     </head>
     <body>
         <header></header>
