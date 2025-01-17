@@ -3,7 +3,7 @@
 </style>
 <header>
     <div class="contenedor">
-        <img src="img/logoe3.svg">
+        <a href="index.php"><img src="img/logoe3.svg"></a>
         <nav>
             <ul>
                 <template id="elementomenu">
