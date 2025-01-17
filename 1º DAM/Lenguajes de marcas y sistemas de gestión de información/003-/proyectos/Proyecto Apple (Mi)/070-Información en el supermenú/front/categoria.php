@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Apple</title>
+		<title>Evoluciona</title>
 		<link rel="Stylesheet" href="estilo/general.css">
 		<meta charset="utf-8">
 	</head>
