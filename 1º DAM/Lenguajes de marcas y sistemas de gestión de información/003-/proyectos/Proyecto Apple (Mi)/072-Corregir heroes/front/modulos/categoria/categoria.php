@@ -1,33 +1,31 @@
 <main>
 	<?php 
 		include "modulos/bloque/bloque.php"; 
-		$bloque1 = new BloqueCompleto(
-			"Titulo bloque 1");
-		echo $bloque1->getBloque();
-
-		$bloque2 = new BloqueCaja(
-			"Titulo bloque 2",
-			"Subtitulo bloque 2");
-		echo $bloque2->getBloque();
-
-		$bloque3 = new BloqueCaja(
-			"Titulo bloque 3",
-			"Subtitulo bloque 3",
-			"texto bloque 3");
-		echo $bloque3->getBloque();
-
-		$bloque4 = new BloqueCaja(
-			"Titulo bloque 4",
-			"Subtitulo bloque 4",
-			"texto bloque 4",
-			"",
-			"",
-			[
-				"background"=>"LightPink",
-				"border-radius"=>"25px"
-			]
+		
+		$conexion = mysqli_connect(
+			"localhost", 
+			"proyectoapple", 
+			"proyectoapple", 
+			"proyectoapple"
 		);
-		echo $bloque4->getBloque();
+
+		$peticion = "
+		SELECT *
+		FROM bloques
+		WHERE categorias_nombre = ".$_GET['cat']."
+		;";
+		// echo $peticion
+		$resultado = mysqli_query($conexion, $peticion);
+
+		while($fila = mysqli_fetch_array($resultado,MYSQLI_ASSOC)){
+			if($fila['tipobloque_tipo'] == "1"){
+				$bloque = new BloqueCompleto($fila['titulo'],$fila['subtitulo']);
+			echo $bloque->getBloque();
+			}else if($fila['tipobloque_tipo'] == "2"){
+				$bloque = new BloqueCaja($fila['titulo'],$fila['subtitulo']);
+			echo $bloque->getBloque();
+			}
+		}
 
 	?>
 </main>

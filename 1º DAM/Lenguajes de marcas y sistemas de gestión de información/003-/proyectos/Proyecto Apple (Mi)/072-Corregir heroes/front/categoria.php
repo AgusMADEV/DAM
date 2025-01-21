@@ -1,10 +1,9 @@
-<!doctype html>
+<?php include "inc/errores.php"; ?>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Evoluciona</title>
-		<link rel="Stylesheet" href="estilo/general.css">
-		<meta charset="utf-8">
-	</head>
+    <head>
+        <?php include "inc/cabeza.php"; ?>
+    </head>
 	<body>
 		<?php include "modulos/cabecera/cabecera.php"; ?>
 		<?php include "modulos/categoria/categoria.php"; ?>
