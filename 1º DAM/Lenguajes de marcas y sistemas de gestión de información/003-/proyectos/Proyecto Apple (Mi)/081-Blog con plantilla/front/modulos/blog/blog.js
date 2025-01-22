@@ -6,7 +6,11 @@ fetch("../back/?tabla=blog")                                                    
 .then(function(datos) {                                                                                                                             // Y cuando reciba datos
     console.log(datos);
     let principal = document.querySelector("main")
+    let plantilla = document.querySelector("#plantillaentrada")
     datos.forEach(function(dato){
-        principal.innerHTML += dato.titulo+"<br>"+dato.texto+"</br>"
+        let instancia = plantilla.content.cloneNode(true);
+        instancia.querySelector("h4").textContent = dato.titulo
+        instancia.querySelector("time").textContent = dato.fecha
+        principal.appendChild(instancia)
     })
 })
