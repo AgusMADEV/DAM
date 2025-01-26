@@ -12,11 +12,11 @@
     $resultado = $conexion->query($peticion);               // Lanzo la petición a la base de datos
 
     if ($fila = $resultado->fetch_assoc()) {                // Si es cierto que hay al menos un usuario
-        echo '
+        /*echo '
             <a href="escritorio.php">
                 Pulsa y vamos al escritorio
-            </a>
-        ';                                                  // Permiteme ir al escritorio
+            </a>';*/
+	  	echo '<meta http-equiv="refresh" content="0; url=escritorio.php">';                                                 // Permiteme ir al escritorio
     }else{                                                  // En caso contrario
         echo "Intento de acceso incorrecto";                // Dime que el intento es incorrecto
     }

@@ -12,5 +12,10 @@ celdas.forEach(function(celda){                                             // P
     celda.onblur = function(){                                                  // Cuando salgo de la celda
         this.setAttribute("contenteditable","false")             // La celda ya no es editable  
         this.classList.remove("celdaactiva")                         // Elimino la clase a la celda
+        let contenido = this.textContent
+        let tabla = this.getAttribute("tabla")
+        let columna = this.getAttribute("columna")
+        let identificador = this.getAttribute("identificador")
+        fetch("actualizar.php?tabla="+encodeURI(tabla)+"&columna="+encodeURI(columna)+"&identificador="+encodeURI(identificador)+"&contenido="+encodeURI(contenido)+"")
     }
 })
