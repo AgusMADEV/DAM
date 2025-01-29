@@ -45,12 +45,22 @@ document.querySelector("#enviardatos").onclick = function(){
 	let nombre = document.querySelector("#nombrecliente").value
 	let apellidos = document.querySelector("#apellidoscliente").value
 	let email = document.querySelector("#emailcliente").value
-	
+	let fecha = new Date();
+	let fechahumana = fecha.getFullYear()+"-"+(fecha.getMonth()+1)+"-"+fecha.getDate()
+	let numeropedido = fecha.getFullYear()+""+(fecha.getMonth()+1)+""+fecha.getDate()+""+fecha.getHours()+""+fecha.getMinutes()+""+fecha.getSeconds()
+
 	json = {
+		"cliente":{
 			"nombre":nombre,
 			"apellidos":apellidos,
-			"email":email,
-			"productos":JSON.parse(localStorage.getItem("carrito"))}
+			"email":email
+		},
+		"pedido":{
+			"fecha":fechahumana,
+			"numerodepedido":numeropedido,
+		},
+		"productos":JSON.parse(localStorage.getItem("carrito"))
+	}
 	console.log("Mañana le enviaremos al servidor el siguiente pedido:")
 	console.log(json)
 }
