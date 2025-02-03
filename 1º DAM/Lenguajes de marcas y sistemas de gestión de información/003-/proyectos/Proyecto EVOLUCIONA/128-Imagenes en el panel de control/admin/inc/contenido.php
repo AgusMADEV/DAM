@@ -16,7 +16,7 @@
             if($clave == "Identificador"){                                                          // Si la clave es Identificador
                 $identificador = $valor;                                                            // A la variable identificador le pongo valor
             }
-            if(strlen((string) $valor) < 300){                                               // Si el campo es menor que 300 caracteres
+            if(!str_contains($clave,"imagen")){                                               // Si el campo es menor que 300 caracteres
                 echo "<td
                     tabla='".$_GET['tabla']."'
                     columna='".$clave."' 
@@ -25,7 +25,7 @@
             }
             else{                                                                                   // En caso contrario
                 echo "<td>
-                <img src='data:image/png;base64,".base64_encode($valor)."'>
+                <img src='../static/".$valor."'>
                 </td>";                                                                             // Cargo los datos como imagen y no como texto
             }
             
