@@ -16,13 +16,31 @@
             if($clave == "Identificador"){                                                          // Si la clave es Identificador
                 $identificador = $valor;                                                            // A la variable identificador le pongo valor
             }
-            if(!str_contains($clave,"imagen")){                                               // Si el campo es menor que 300 caracteres
-                echo "<td
-                    tabla='".$_GET['tabla']."'
-                    columna='".$clave."' 
-                    identificador='".$identificador."' 
-                >".$valor."</td>";                                                         // Pongo el valor en una columna
-            }
+            if(!str_contains($clave,"imagen")){						// Si el campo es menor que 300 caracteres
+                if(str_contains($clave,"_")){
+                $explotado = explode("_",$clave);
+                $tabla = $explotado[0];
+                $columna = $explotado[1];
+                ////////////// SUBCONSULTA ///////////
+                $peticion2 = "
+                    SELECT ".$columna." 
+                    FROM ".$tabla." 
+                    WHERE Identificador = ".$valor.";";
+                $resultado2 = $conexion->query($peticion2);
+                while ($fila2 = $resultado2->fetch_assoc()) {
+                    echo "<td>".$fila2[$columna]."</td>";
+                }
+                ////////////// SUBCONSULTA ///////////
+                
+                
+            }else{
+                    echo "<td
+                        tabla='".$_GET['tabla']."'
+                        columna='".$clave."' 
+                        identificador='".$identificador."' 
+                    >".$valor."</td>";                                                         // Pongo el valor en una columna
+                } 
+            }                                    
             else{                                                                                   // En caso contrario
                 echo "<td>
                 <img src='../static/".$valor."'>
