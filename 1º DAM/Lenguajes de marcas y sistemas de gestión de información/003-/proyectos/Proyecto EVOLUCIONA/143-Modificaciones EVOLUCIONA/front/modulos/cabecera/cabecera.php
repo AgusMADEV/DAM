@@ -3,25 +3,29 @@
 </style>
 <header>
     <div class="contenedor">
-        <a href="index.php" id="corporativo"><h1>Evoluciona</h1><img src="img/logoe3.svg"></a>
-        <nav>
+        <nav class="menu">
             <ul>
                 <template id="elementomenu">
                     <li>
                         <a href=""></a>
                     </li>
                 </template>
+            </ul>
+        </nav>
+        <a href="index.php"><img src="img/evoluciona.svg"></a>
+        <nav class="menu">
+            <ul>
                 <li>
-                        <a href="blog.php">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contacto.php">Contacto</a>
-                    </li>
-                    <li>
-                        <?php
-                                include "modulos/tienda/artilugio.php";
-                        ?>
-                    </li>
+                    <a href="blog.php">Blog</a>
+                </li>
+                <li>
+                    <a href="contacto.php">Contacto</a>
+                </li>
+                <li>
+                    <?php
+                        include "modulos/tienda/artilugio.php";
+                    ?>
+                </li>
             </ul>
         </nav>
         <div id="supermenu">

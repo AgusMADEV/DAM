@@ -40,9 +40,9 @@ function procesaCabecera(){
 						let cabecera = document.querySelector("header")
 						difumina(cabecera)
 					})
-		     });
+		    });
 		     cabecera.prepend(instancia);
-		 });
+		});
 	})
 	.catch(function(error) {
 		 console.warn("Error al cargar las categorías:", error);
@@ -58,7 +58,8 @@ function procesaCabecera(){
 		console.log("Has salido")
 		document.querySelector("main").classList.remove("difuminado")	// Le quito la clase css
 		document.querySelector("header").classList.remove("grande")
-		cabecera.style.background = "rgba(255,255,255,1)"					// Y le pongo un color blanco sólido
+		cabecera.style.background = "rgba(253, 174, 201, 0.9)"					// Y le pongo un color blanco sólido
 	}
+	
 }
 procesaCabecera()

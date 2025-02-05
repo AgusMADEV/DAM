@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-01-2025 a las 19:10:31
+-- Tiempo de generación: 05-02-2025 a las 23:07:32
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `proyectoapple`
+-- Base de datos: `evoluciona`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `blog` (
   `Identificador` int(255) NOT NULL,
   `titulo` varchar(255) NOT NULL,
-  `imagen` mediumblob DEFAULT NULL,
+  `imagen` varchar(255) DEFAULT NULL,
   `fecha` date NOT NULL,
   `contenido` text NOT NULL,
   `categoriasblog_categoria` int(255) NOT NULL
@@ -151,6 +151,28 @@ INSERT INTO `categoriasblog` (`Identificador`, `categoria`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `config`
+--
+
+CREATE TABLE `config` (
+  `Identificador` int(255) NOT NULL,
+  `clave` varchar(255) NOT NULL,
+  `valor` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `config`
+--
+
+INSERT INTO `config` (`Identificador`, `clave`, `valor`) VALUES
+(1, 'titulo', 'Evoluciona'),
+(2, 'descripcion', 'EVOLUCIONA contigo mism@'),
+(3, 'palabrasclave', 'HTML, CSS, JavaScript'),
+(4, 'autor', 'Agustín Morcillo Aguado');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `destacados`
 --
 
@@ -183,8 +205,10 @@ CREATE TABLE `heroes` (
   `Identificador` int(255) NOT NULL,
   `titulo` varchar(255) NOT NULL,
   `texto` varchar(255) NOT NULL,
-  `enlace` varchar(255) NOT NULL,
-  `comprar` varchar(255) NOT NULL,
+  `textoboton1` varchar(255) NOT NULL,
+  `enlace1` varchar(255) NOT NULL,
+  `textoboton2` varchar(255) NOT NULL,
+  `enlace2` varchar(255) NOT NULL,
   `imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
@@ -192,10 +216,10 @@ CREATE TABLE `heroes` (
 -- Volcado de datos para la tabla `heroes`
 --
 
-INSERT INTO `heroes` (`Identificador`, `titulo`, `texto`, `enlace`, `comprar`, `imagen`) VALUES
-(1, '<i>Asesoramiento psicológico y crecimiento personal</i>', '<span style=\"font-size:30px;\">Elena Botezatu</span>', 'https://www.apple.com/es/', 'https://www.apple.com/es/store', 'heroe1.png'),
-(2, 'heroe 2', 'heroe 2', 'https://www.apple.com/es/', 'https://www.apple.com/es/store', 'heroe2.png'),
-(4, 'Uno más', 'Prueba', '', '', 'heroe3.png');
+INSERT INTO `heroes` (`Identificador`, `titulo`, `texto`, `textoboton1`, `enlace1`, `textoboton2`, `enlace2`, `imagen`) VALUES
+(1, 'Terapia infanto-juvenil', 'Elena Botezatu', 'Saber más', 'categoria.php?cat=13', 'Ponte en contacto', 'contacto.php', 'heroe1.png'),
+(2, 'Terapia infanto-juvenil', 'Elena Botezatu', 'Saber más', 'producto.php?prod=1', 'Ponte en contacto', 'contacto.php', 'heroe2.png'),
+(4, 'Uno más', 'Prueba', 'Saber más', '', 'Ponte en contacto', 'contacto.php', 'heroe3.png');
 
 -- --------------------------------------------------------
 
@@ -221,6 +245,27 @@ INSERT INTO `oferta` (`Identificador`, `texto`, `enlace`, `fechainicio`, `fechaf
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `paginas`
+--
+
+CREATE TABLE `paginas` (
+  `Identificador` int(255) NOT NULL,
+  `titulo` varchar(255) NOT NULL,
+  `contenido` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `paginas`
+--
+
+INSERT INTO `paginas` (`Identificador`, `titulo`, `contenido`) VALUES
+(1, 'Términos de uso', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(2, 'Política de cookies', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'),
+(3, 'Aviso legal', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `productos`
 --
 
@@ -241,6 +286,28 @@ INSERT INTO `productos` (`Identificador`, `titulo`, `descripcion`, `precio`, `ca
 (2, 'Orientación educativa', 'Orientación educativa', 120.00, 13),
 (3, 'Sobre mi', 'Sobre mi', 0.00, 11),
 (4, 'Aplicaciones', 'Aplicaciones', 0.00, 11);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `redessociales`
+--
+
+CREATE TABLE `redessociales` (
+  `Identificador` int(255) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `icono` varchar(255) NOT NULL,
+  `enlace` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `redessociales`
+--
+
+INSERT INTO `redessociales` (`Identificador`, `nombre`, `icono`, `enlace`) VALUES
+(1, 'Instagram', 'https://www.instagram.com/favicon.ico', 'https://www.instagram.com/elenabtz7'),
+(2, 'YouTube', 'https://www.youtube.com/favicon.ico', 'https://www.youtube.com/'),
+(4, 'Linkedin', 'https://www.linkedin.com/favicon.ico', 'https://www.linkedin.com/feed/');
 
 -- --------------------------------------------------------
 
@@ -324,6 +391,12 @@ ALTER TABLE `categoriasblog`
   ADD PRIMARY KEY (`Identificador`);
 
 --
+-- Indices de la tabla `config`
+--
+ALTER TABLE `config`
+  ADD PRIMARY KEY (`Identificador`);
+
+--
 -- Indices de la tabla `destacados`
 --
 ALTER TABLE `destacados`
@@ -342,11 +415,23 @@ ALTER TABLE `oferta`
   ADD PRIMARY KEY (`Identificador`);
 
 --
+-- Indices de la tabla `paginas`
+--
+ALTER TABLE `paginas`
+  ADD PRIMARY KEY (`Identificador`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`Identificador`),
   ADD KEY `productosacategorias` (`categorias_nombre`);
+
+--
+-- Indices de la tabla `redessociales`
+--
+ALTER TABLE `redessociales`
+  ADD PRIMARY KEY (`Identificador`);
 
 --
 -- Indices de la tabla `tipobloque`
@@ -395,6 +480,12 @@ ALTER TABLE `categoriasblog`
   MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `config`
+--
+ALTER TABLE `config`
+  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `destacados`
 --
 ALTER TABLE `destacados`
@@ -404,7 +495,7 @@ ALTER TABLE `destacados`
 -- AUTO_INCREMENT de la tabla `heroes`
 --
 ALTER TABLE `heroes`
-  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `oferta`
@@ -413,10 +504,22 @@ ALTER TABLE `oferta`
   MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `paginas`
+--
+ALTER TABLE `paginas`
+  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
   MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `redessociales`
+--
+ALTER TABLE `redessociales`
+  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tipobloque`
