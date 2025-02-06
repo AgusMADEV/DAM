@@ -21,6 +21,10 @@ header .contenedor{
 header .contenedor img{
     display: inline-block;
     margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+header .contenedor img:hover{
+    transform: scale(1.15);
 }
 header .contenedor nav{
     display: inline-block;
@@ -36,6 +40,10 @@ header .contenedor nav ul li{
     display: inline-block;
     margin: 0px 20px;
     line-height: 44px;
+    transition: all 0.3s ease-in-out;
+}
+header .contenedor .menu ul li:hover{
+    transform: scale(1.2);
 }
 header .contenedor ul li a{
     text-decoration: none;
@@ -46,6 +54,7 @@ header .contenedor .menu ul li a{
     font-weight: 400;
     letter-spacing: 2.5px;
     text-shadow: 0px 2px 4px rgba(0,0,0,0.3) ;
+
 }
 #supermenu{
 	display: flex;
