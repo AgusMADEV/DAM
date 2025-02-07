@@ -3,15 +3,19 @@
 </style>
 <header>
     <div class="contenedor">
-        <a href="index.php" id="corporativo"><h1>Evoluciona</h1><img src="img/logoe3.svg"></a>
-        <nav>
-            <ul>
-                <template id="elementomenu">
+        <nav class="menu">
+                <ul>
+                    <template id="elementomenu">
+                        <li>
+                            <a href=""><h3></h3></a>
+                        </li>
+                    </template>
+                </ul>
+            </nav>
+            <a href="index.php"><img src="img/evoluciona.svg"></a>
+            <nav class="menu">
+                <ul>
                     <li>
-                        <a href=""></a>
-                    </li>
-                </template>
-                <li>
                         <a href="blog.php">Blog</a>
                     </li>
                     <li>
@@ -19,11 +23,11 @@
                     </li>
                     <li>
                         <?php
-                                include "modulos/tienda/artilugio.php";
+                            include "modulos/tienda/artilugio.php";
                         ?>
                     </li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
         <div id="supermenu">
             <div class="columna">
                 <h3 id="categoria">Cabecera</h3>
