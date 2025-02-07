@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2025 a las 23:07:32
+-- Tiempo de generación: 07-02-2025 a las 12:03:58
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -217,9 +217,8 @@ CREATE TABLE `heroes` (
 --
 
 INSERT INTO `heroes` (`Identificador`, `titulo`, `texto`, `textoboton1`, `enlace1`, `textoboton2`, `enlace2`, `imagen`) VALUES
-(1, 'Terapia infanto-juvenil', 'Elena Botezatu', 'Saber más', 'categoria.php?cat=13', 'Ponte en contacto', 'contacto.php', 'heroe1.png'),
-(2, 'Terapia infanto-juvenil', 'Elena Botezatu', 'Saber más', 'producto.php?prod=1', 'Ponte en contacto', 'contacto.php', 'heroe2.png'),
-(4, 'Uno más', 'Prueba', 'Saber más', '', 'Ponte en contacto', 'contacto.php', 'heroe3.png');
+(1, 'Terapia adultos', 'Elena Botezatu', 'Saber más', 'categoria.php?cat=13', 'Ponte en contacto', 'contacto.php', 'heroe3.png'),
+(2, 'Terapia infanto-juvenil', '2', 'Saber más', 'producto.php?prod=1', 'Ponte en contacto', 'contacto.php', 'heroe2.png');
 
 -- --------------------------------------------------------
 
@@ -234,13 +233,6 @@ CREATE TABLE `oferta` (
   `fechainicio` date NOT NULL,
   `fechafinal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
-
---
--- Volcado de datos para la tabla `oferta`
---
-
-INSERT INTO `oferta` (`Identificador`, `texto`, `enlace`, `fechainicio`, `fechafinal`) VALUES
-(1, 'La mejor oferta que verás en tu vida!!!', 'https://www.apple.com/es/?afid=p238%7CsqBqp3TiI-dc_mtid_187079nc38483_pcrid_712923558400_pgrid_16626051515_pntwk_g_pchan__pexid__ptid_kwd-10778630_&cid=aos-es-kwgo-brand--slid--bran-product-', '2025-01-01', '2025-01-08');
 
 -- --------------------------------------------------------
 
@@ -501,7 +493,7 @@ ALTER TABLE `heroes`
 -- AUTO_INCREMENT de la tabla `oferta`
 --
 ALTER TABLE `oferta`
-  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Identificador` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `paginas`
