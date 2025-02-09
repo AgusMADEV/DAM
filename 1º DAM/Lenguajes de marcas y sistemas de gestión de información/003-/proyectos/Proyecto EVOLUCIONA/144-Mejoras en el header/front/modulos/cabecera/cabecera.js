@@ -1,65 +1,80 @@
+function procesaCabecera() {
+    fetch("../back/?tabla=categorias")
+        .then(response => response.json())
+        .then(datos => {
+            let cabecera = document.querySelector("header nav ul");
+            let plantilla = document.querySelector("#elementomenu");
+			if (!plantilla) {
+        console.warn("No se encontró la plantilla #elementomenu");
+        return;
+    }
 
-/*
-	Este archivo procesa el poblado de elementos y subelementos en la cabecera de la pagina
-*/
-function procesaCabecera(){
-	// Cargo los menús de la cabecera ///////////////////////////////////
-	fetch("../back/?tabla=categorias") 											// Cargo un endpoint en el back
-	.then(function(response) { 													// Cuando obtenga respuesta
-		 return response.json(); 													// La convierto en json
-	})
-	.then(function(datos) { 														// Y cuando reciba datos
-		 console.log(datos);
-		 let cabecera = document.querySelector("header nav ul");			// Selecciono la cabecera
-		 let plantilla = document.querySelector("#elementomenu");		// Tomo una plantilla template
-		 
-		 datos.forEach(function(dato) {											// Para cada dato recibido
-		     let instancia = plantilla.content.cloneNode(true);			// Creo una instancia
-		     let enlace = instancia.querySelector("a");						// Selecciono el enlace interior
-		     
-		     enlace.textContent = dato.nombre;									// Le pongo el atributo de texto
-		     enlace.setAttribute("href", "categoria.php?cat=" + dato.Identificador);	// Y le digo a qué página debe ir
-		     enlace.setAttribute("cat", dato.Identificador);				// Le pongo un atributo categoría
-		     instancia.querySelector("li").classList.add("categoria")
-		     
-		     enlace.addEventListener("mouseover", function() {			// Cuando pase por encima de esa categoria
-		         console.log("Vamos a ver que hay en esta categoria");
-		         console.log(this.textContent)
-		         let tituloseccion = this.textContent						// Cargo el titulo de la categoria
-		         fetch("../back/?busca=productos&campo=categorias_nombre&dato="+this.getAttribute("cat"))	// Fetch para obtener productos por cateogrias
-		         .then(function(response) { 									// Cuando obtenga respuesta
-						 return response.json(); 									// La convierto en json
-					})
-					.then(function(datos) { 										// Y cuando reciba datos
-						 console.log(datos);
-						 document.querySelector("#categoria").textContent = tituloseccion	// Pongo el titulo de la categoria
-						 document.querySelector("#productos").innerHTML = ""	// Vacio los productos
-						 datos.forEach(function(dato){								// Para cada uno de los productos
-						 document.querySelector("#productos").innerHTML += "<li><a href='producto.php?prod="+dato.Identificador+"'>"+dato.titulo+"</a></li>"	// Los pongo en el listado
-						 })
-						let cabecera = document.querySelector("header")
-						difumina(cabecera)
-					})
-		    });
-		     cabecera.prepend(instancia);
-		});
-	})
-	.catch(function(error) {
-		 console.warn("Error al cargar las categorías:", error);
-		 document.querySelector("#contienemodal").style.display = "block"
-	});
-	// Aplico difuminado en el fondo al entrar y salir de la cabecera /////////////////////
-	let cabecera = document.querySelector("header")							// Selecciono la cabecera
-	let categorias = document.querySelectorAll(".categoria")
-	/*cabecera.addEventListener("mouseenter",function(){
-			difumina(cabecera)
-		})*/
-	cabecera.onmouseleave = function(){											// Cuando salgo
-		console.log("Has salido")
-		document.querySelector("main").classList.remove("difuminado")	// Le quito la clase css
-		document.querySelector("header").classList.remove("grande")
+            datos.forEach(dato => {
+                let instancia = plantilla.content.cloneNode(true);
+                let enlace = instancia.querySelector("a");
 
-	}
-	
+                enlace.textContent = dato.nombre;
+                enlace.setAttribute("href", "categoria.php?cat=" + dato.Identificador);
+                enlace.setAttribute("cat", dato.Identificador);
+                instancia.querySelector("li").classList.add("categoria");
+
+                enlace.addEventListener("mouseenter", function () {
+                    let tituloseccion = this.textContent;
+                    fetch("../back/?busca=productos&campo=categorias_nombre&dato=" + this.getAttribute("cat"))
+                        .then(response => response.json())
+                        .then(datos => {
+                            document.querySelector("#categoria").textContent = tituloseccion;
+                            let productos = document.querySelector("#productos");
+                            productos.innerHTML = "";
+                            datos.forEach(dato => {
+                                productos.innerHTML += `<li><a href='producto.php?prod=${dato.Identificador}'>${dato.titulo}</a></li>`;
+                            });
+
+                            let cabecera = document.querySelector("header");
+                            difumina(cabecera);
+                            cabecera.classList.add("menu-activo"); // Agrega una clase al header cuando el menú está activo
+                        });
+                });
+
+                cabecera.prepend(instancia);
+            });
+
+            // Cierra el menú si el cursor se mueve fuera del header
+            let header = document.querySelector("header");
+            header.addEventListener("mouseleave", function () {
+                cerrarSupermenu();
+            });
+
+            // Cierra el menú si el cursor entra en el logo, Blog o Contacto
+            let logo = document.querySelector("#logo");
+            let menu = document.querySelector("#segundomenu");
+
+            [logo, menu].forEach(el => {
+                el.addEventListener("mouseenter", function () {
+                    cerrarSupermenu();
+                });
+            });
+        })
+        .catch(error => {
+            console.warn("Error al cargar las categorías:", error);
+            document.querySelector("#contienemodal").style.display = "block";
+        });
 }
-procesaCabecera()
+
+function difumina(cabecera) {
+    console.log("Has entrado");
+    document.querySelector("main").classList.add("difuminado");
+    document.querySelector("header").classList.add("grande");
+}
+
+// Función para cerrar el supermenú
+function cerrarSupermenu() {
+    console.log("Cerrando supermenú");
+    document.querySelector("main").classList.remove("difuminado");
+    document.querySelector("header").classList.remove("grande", "menu-activo");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    procesaCabecera();
+});
+

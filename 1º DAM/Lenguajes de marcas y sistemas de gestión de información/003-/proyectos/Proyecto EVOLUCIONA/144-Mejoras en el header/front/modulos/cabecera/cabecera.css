@@ -42,14 +42,14 @@ header .contenedor nav ul li{
     line-height: 44px;
     transition: all 0.3s ease-in-out;
 }
-header .contenedor .menu ul li:hover{
+header .contenedor  ul li:hover{
     transform: scale(1.2);
 }
 header .contenedor ul li a{
     text-decoration: none;
     color: whitesmoke;
 }
-header .contenedor .menu ul li a{
+header .contenedor ul li a{
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 2.5px;

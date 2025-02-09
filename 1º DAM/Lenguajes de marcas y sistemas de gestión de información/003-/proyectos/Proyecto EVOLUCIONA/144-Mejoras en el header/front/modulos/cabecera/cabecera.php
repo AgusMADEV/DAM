@@ -12,8 +12,8 @@
                 </template>
             </ul>
         </nav>
-        <a href="index.php"><img src="img/evoluciona.svg"></a>
-        <nav class="menu">
+        <a href="index.php" id="logo"><img src="img/evoluciona.svg"></a>
+        <nav id="segundomenu">
             <ul>
                 <li>
                     <a href="blog.php">Blog</a>
