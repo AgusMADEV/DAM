@@ -3,6 +3,7 @@ footer{
     background: whitesmoke;
     position: relative;
     bottom: 0px;
+	margin-top: 50px;
 }
 footer li{
 	display: flex;

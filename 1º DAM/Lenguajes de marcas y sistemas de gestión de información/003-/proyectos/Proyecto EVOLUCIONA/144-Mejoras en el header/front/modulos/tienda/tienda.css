@@ -11,7 +11,9 @@ body {
     background-color: #f4f4f9;
     color: #333;
 }
-
+main{
+    padding-top: 170px;
+}
 main .contenedor {
     width: 90%;
     max-width: 1200px;
