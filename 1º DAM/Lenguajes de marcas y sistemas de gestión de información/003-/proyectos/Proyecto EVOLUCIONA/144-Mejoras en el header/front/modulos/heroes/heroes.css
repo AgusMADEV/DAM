@@ -94,7 +94,7 @@ transform: rotate(45deg);
 .heroe button.learn-more .button-text {
 transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
 position: absolute;
-top: 0;
+top: 13px;
 left: 0;
 right: 0;
 bottom: 0;
