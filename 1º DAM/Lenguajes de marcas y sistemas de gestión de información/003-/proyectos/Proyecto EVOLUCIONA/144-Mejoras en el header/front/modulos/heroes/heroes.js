@@ -15,7 +15,7 @@ function recogeHeroes(){
             instancia.querySelector("#enlace1").setAttribute("href",dato.enlace1)
             instancia.querySelector("#enlace2").setAttribute("href",dato.enlace2)
             instancia.querySelector("#boton1").textContent = dato.textoboton1
-            instancia.querySelector("#boton2").textContent = dato.textoboton2
+            instancia.querySelector(".learn-more .button-text").textContent = dato.textoboton2
             contenedorheroes.appendChild(instancia)
             
         })
