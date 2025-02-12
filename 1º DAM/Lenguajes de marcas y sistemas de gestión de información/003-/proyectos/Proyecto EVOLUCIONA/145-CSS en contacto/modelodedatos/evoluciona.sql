@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-02-2025 a las 12:03:58
+-- Tiempo de generación: 12-02-2025 a las 15:28:29
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -217,8 +217,8 @@ CREATE TABLE `heroes` (
 --
 
 INSERT INTO `heroes` (`Identificador`, `titulo`, `texto`, `textoboton1`, `enlace1`, `textoboton2`, `enlace2`, `imagen`) VALUES
-(1, 'Terapia adultos', 'Elena Botezatu', 'Saber más', 'categoria.php?cat=13', 'Ponte en contacto', 'contacto.php', 'heroe3.png'),
-(2, 'Terapia infanto-juvenil', '2', 'Saber más', 'producto.php?prod=1', 'Ponte en contacto', 'contacto.php', 'heroe2.png');
+(1, 'Terapia adultos', 'Elena Botezatu', 'Saber más', 'categoria.php?cat=13', 'Contáctame', 'contacto.php', 'heroe3.png'),
+(2, 'Terapia infanto-juvenil', '2', 'Saber más', 'producto.php?prod=1', 'Contáctame', 'contacto.php', 'heroe2.png');
 
 -- --------------------------------------------------------
 
