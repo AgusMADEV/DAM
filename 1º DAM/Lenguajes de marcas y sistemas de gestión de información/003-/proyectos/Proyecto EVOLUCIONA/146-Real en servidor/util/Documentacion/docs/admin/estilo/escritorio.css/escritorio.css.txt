@@ -1,2 +1,0 @@
-Docstring del documento
-	Y esta es otra linea
