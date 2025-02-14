@@ -1,0 +1,153 @@
+🕒 [2025-02-02 13:28:55]
+📌 Actualización del sistema
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt update && sudo apt upgrade -y
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:33:55]
+📌 Instalación de Apache
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt install apache2 -y
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:38:55]
+📌 Instalación de PHP y extensiones
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt install php php-cli php-mysql php-curl php-gd php-mbstring php-xml php-zip -y
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:43:55]
+📌 Instalación de MySQL
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt install mysql-server -y
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:48:55]
+📌 Instalación de Python y librerías
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt install python3 python3-pip -y
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:53:55]
+📌 Verificación y acceso SSH
+================================================================================
+🔹 Comandos ejecutados:
+ssh usuario_demo@IP_DEL_SERVIDOR
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 13:58:55]
+📌 Configuración del firewall UFW
+================================================================================
+🔹 Comandos ejecutados:
+sudo ufw allow OpenSSH
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+sudo ufw enable
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:03:55]
+📌 Creación de VirtualHosts en Apache
+================================================================================
+🔹 Comandos ejecutados:
+sudo nano /etc/apache2/sites-available/usuario_demo.conf
+sudo a2ensite usuario_demo.conf
+sudo systemctl restart apache2
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:08:55]
+📌 Clonación de repositorios desde GitHub
+================================================================================
+🔹 Comandos ejecutados:
+git clone https://github.com/luisrocedev/usuario_demo.git
+git clone https://github.com/luisrocedev/proyecto_demo.git
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:13:55]
+📌 Configuración de permisos y propietarios en /var/www/
+================================================================================
+🔹 Comandos ejecutados:
+sudo chown -R www-data:www-data /var/www/usuario_demo
+sudo chmod -R 755 /var/www/usuario_demo
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:18:55]
+📌 Instalación de phpMyAdmin y configuración de usuario MySQL
+================================================================================
+🔹 Comandos ejecutados:
+sudo apt install phpmyadmin -y
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:23:55]
+📌 Importación de base de datos en MySQL
+================================================================================
+🔹 Comandos ejecutados:
+mysqldump -u usuario_local -p proyecto_demo > proyecto_demo.sql
+scp proyecto_demo.sql usuario@IP_DEL_SERVIDOR:/home/usuario/
+mysql -u usuario_demo -p proyecto_demo < /home/usuario/proyecto_demo.sql
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:28:55]
+📌 Verificación de acceso a phpMyAdmin
+================================================================================
+🔹 Comandos ejecutados:
+http://IP_DEL_SERVIDOR/phpmyadmin
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:33:55]
+📌 Prueba de conexión con VirtualHosts
+================================================================================
+🔹 Comandos ejecutados:
+http://usuario_demo.ejemplo.com
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:38:55]
+📌 Configuración de backups en cron
+================================================================================
+🔹 Comandos ejecutados:
+sudo crontab -e
+0 3 * * * mysqldump -u usuario_demo -p'tu_contraseña_mysql' proyecto_demo > /backups/db_backup_$(date +\%F).sql && tar -czf /backups/files_backup_$(date +\%F).tar.gz /var/www/usuario_demo
+0 4 * * * find /backups -type f -mtime +7 -exec rm {} \;
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:43:55]
+📌 Prueba de generación de backups manualmente
+================================================================================
+🔹 Comandos ejecutados:
+mysqldump -u usuario_demo -p'tu_contraseña_mysql' proyecto_demo > /backups/db_backup_test.sql
+tar -czf /backups/files_backup_test.tar.gz /var/www/usuario_demo
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:48:55]
+📌 Verificación de backups en /backups/
+================================================================================
+🔹 Comandos ejecutados:
+ls -lh /backups/
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 14:53:55]
+📌 Corrección de permisos en /backups/
+================================================================================
+🔹 Comandos ejecutados:
+sudo chown usuario_demo:usuario_demo /backups/files_backup_test.tar.gz
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 15:03:55]
+📌 Revisión final del sistema
+================================================================================
+🔹 Comandos ejecutados:
+sudo systemctl status apache2
+sudo systemctl status mysql
+--------------------------------------------------------------------------------
+
+🕒 [2025-02-02 15:08:55]
+📌 Setup inicial finalizado
+================================================================================
+🔹 Comandos ejecutados:
+Servidor listo para producción 🚀
+--------------------------------------------------------------------------------

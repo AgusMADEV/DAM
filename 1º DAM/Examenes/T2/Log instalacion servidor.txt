@@ -1,0 +1,62 @@
+Servidor:217.154.3.142
+
+2025/01/8 19:40 - Servidor reinstalado
+2025/01/8 19:45 - sudo apt-get install apache2
+2025/01/8 19:46 - sudo apt install php (8.3)
+2025/01/8 19:47 - sudo apt install mysql-server
+2025/01/8 19:48 - sudo mysql_secure_installation
+2025/01/8 19:50 - sudo mysql -u root -p
+2025/01/8 19:54 - cambio contraseña root MySQL (EVOluciona123$)
+2025/01/8 19:56 - actualizo paquetes, sudo apt update && sudo apt upgrade -y
+2025/01/8 20:06 - creamos base de datos, CREATE DATABASE evoluciona
+2025/01/8 20:07 - mysql -u root -p evoluciona < evoluciona.sql
+2025/01/8 20:10 - CREATE USER 'EvolucionaUser3$'@'localhost' IDENTIFIED BY 'EVOluciona123$';
+2025/01/8 20:11 - GRANT ALL PRIVILEGES ON evoluciona.* TO 'EvolucionaUser3$'@'localhost';
+2025/01/8 20:12 - FLUSH PRIVILEGES;
+2025/01/8 20:23 - evopanel migrado por FTP
+2025/01/8 20:23 - sudo nano /etc/php/8.3/apache2/php.ini (editar display-error para ver los errores)
+2025/01/8 20:30 - sudo service apache2 restart
+2025/01/8 20:35 - sudo apt install git
+2025/01/8 20:36 - git config --global user.name "Tu nombre"
+2025/01/8 20:36 - git config --global user.email "Tu email"
+2025/01/8 20:37 - cd /ruta/donde/quieres/clonar
+2025/01/8 20:37 - git clone https://github.com/usuario/repositorio.git
+2025/01/8 20:41 - git pull origin main (O 'master' según el repositorio)
+2025/01/8 20:45 - git clone https://github.com/usuario/otro_repositorio.git
+2025/01/8 20:50 - sudo chmod 777 error.log
+2025/01/8 20:59 - sudo apt install php-sqlite3
+2025/01/8 21:05 - pip3 install matplotlib
+2025/01/8 21:05 - pip3 install psutil
+
+2025/01/9 15:17 - sudo chown -R www-data:www-data var/www/html/database (permisos para apache)
+2025/01/09 16:20 - sudo a2enmod ssl
+2025/01/09 16:21 - sudo systemctl restart apache2
+2025/01/09 16:25 - sudo mkdir -p /etc/apache2/ssl
+2025/01/09 23:59 - sudo a2dissite default-ssl.conf
+2025/01/10 00:02 - sudo a2ensite evoluciona.conf
+2025/01/09 00:05 - sudo apache2ctl configtest
+2025/01/09 00:06 - sudo systemctl restart apache2
+
+
+VIRTUAL HOST CONFIG: 
+<VirtualHost *:443>
+    ServerAdmin info@evo-luciona.es
+    ServerName evo-luciona.es
+    ServerAlias www.evo-luciona.es
+    DocumentRoot /var/www/html/evoluciona
+
+    SSLEngine on
+    SSLCertificateFile /etc/apache2/ssl/evoluciona_combined.cer
+    SSLCertificateKeyFile /etc/apache2/ssl/evoluciona.key
+
+    <Directory /var/www/html/evoluciona>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/evoluciona_error.log
+    CustomLog ${APACHE_LOG_DIR}/evoluciona_access.log combined
+</VirtualHost>
+
+Falta hacer clon evocadetblue PRIV
