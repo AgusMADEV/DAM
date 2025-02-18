@@ -23,6 +23,9 @@ Servidor:217.154.3.142
 2025/01/8 20:37 - git clone https://github.com/usuario/repositorio.git
 2025/01/8 20:41 - git pull origin main (O 'master' según el repositorio)
 2025/01/8 20:45 - git clone https://github.com/usuario/otro_repositorio.git
+2025/01/8 20:46 - git reset --hard	(Para descartar cambios locales)
+2025/01/8 20:47 - git pull origin main
+
 2025/01/8 20:50 - sudo chmod 777 error.log
 2025/01/8 20:59 - sudo apt install php-sqlite3
 2025/01/8 21:05 - pip3 install matplotlib
