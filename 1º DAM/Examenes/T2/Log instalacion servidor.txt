@@ -61,5 +61,23 @@ VIRTUAL HOST CONFIG:
     ErrorLog ${APACHE_LOG_DIR}/evoluciona_error.log
     CustomLog ${APACHE_LOG_DIR}/evoluciona_access.log combined
 </VirtualHost>
+--------------------------------------------------------------------------
+<VirtualHost *:443>
+    ServerAdmin info@evo-luciona.es
+    ServerName evologs.evo-luciona.es
+    ServerAlias www.evologs.evo-luciona.es
+    DocumentRoot /var/www/html/evologs
 
-Falta hacer clon evocadetblue PRIV
+    SSLEngine on
+    SSLCertificateFile /etc/apache2/ssl/evoluciona_combined.cer
+    SSLCertificateKeyFile /etc/apache2/ssl/evoluciona.key
+
+    <Directory /var/www/html/evologs>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/evologs_error.log
+    CustomLog ${APACHE_LOG_DIR}/evologs_access.log combined
+</VirtualHost>
