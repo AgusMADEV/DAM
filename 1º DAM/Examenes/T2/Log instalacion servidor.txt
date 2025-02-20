@@ -40,6 +40,9 @@ Servidor:217.154.3.142
 2025/01/09 00:05 - sudo apache2ctl configtest
 2025/01/09 00:06 - sudo systemctl restart apache2
 
+2025/01/16 10:52 - CREATE USER 'EvologixUser3$'@'localhost' IDENTIFIED BY 'EVOluciona123$';
+2025/01/16 10:53 - GRANT ALL PRIVILEGES ON evologix.* TO 'EvologixUser3$'@'localhost';
+2025/01/16 10:53 - FLUSH PRIVILEGES;
 
 VIRTUAL HOST CONFIG: 
 <VirtualHost *:443>
