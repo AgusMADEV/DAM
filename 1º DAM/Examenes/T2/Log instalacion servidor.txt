@@ -44,6 +44,17 @@ Servidor:217.154.3.142
 2025/01/16 10:53 - GRANT ALL PRIVILEGES ON evologix.* TO 'EvologixUser3$'@'localhost';
 2025/01/16 10:53 - FLUSH PRIVILEGES;
 
+2025/01/17 09:12 - sudo passwd root
+2025/01/17 09:15 - sudo adduser --home /var/www/html agusmaweb
+2025/01/17 09:18 - sudo usermod -aG sudo agusmaweb
+2025/01/17 09:18 - sudo usermod -aG www-data agusmaweb
+2025/01/17 09:20 - sudo reboot
+2025/01/17 09:25 - sudo apt update
+2025/01/17 09:25 - apt list --upgradable
+2025/01/17 09:25 - sudo apt upgrade
+
+
+
 VIRTUAL HOST CONFIG: 
 <VirtualHost *:443>
     ServerAdmin info@evo-luciona.es
